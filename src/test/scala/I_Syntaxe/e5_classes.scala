@@ -6,7 +6,7 @@ import support.HandsOnSuite
 *  Passe très rapide sur les classes en Scala
 */
 
-class e1_classes extends HandsOnSuiteP1{
+class e5_classes extends HandsOnSuiteP1{
 
   // on peut définir des classes avec des paramètres val et var
   class ClassWithValParameter(val name: String) {
