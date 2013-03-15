@@ -1,4 +1,4 @@
-package I_Syntaxe
+package e1_Syntaxe
 
 import support.HandsOnSuite
 

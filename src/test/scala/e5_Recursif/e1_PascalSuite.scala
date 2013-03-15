@@ -1,6 +1,6 @@
-package IV_Recursif
+package e5_Recursif
 
-import I_Syntaxe.HandsOnSuiteP1
+import e1_Syntaxe.HandsOnSuiteP1
 
 /**
 *The following pattern of numbers is called Pascal’s triangle.

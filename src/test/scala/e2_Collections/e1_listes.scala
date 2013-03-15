@@ -1,6 +1,6 @@
-package II_Collections
+package e2_Collections
 
-import I_Syntaxe.HandsOnSuiteP1
+import e1_Syntaxe.HandsOnSuiteP1
 
 /**
 * On passe aux LISTES

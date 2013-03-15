@@ -1,6 +1,6 @@
-package IV_Recursif
+package e5_Recursif
 
-import I_Syntaxe.HandsOnSuiteP1
+import e1_Syntaxe.HandsOnSuiteP1
 
  /**
  * Write a recursive function that counts how many different ways you can make change for an amount, given a list of coin denominations.

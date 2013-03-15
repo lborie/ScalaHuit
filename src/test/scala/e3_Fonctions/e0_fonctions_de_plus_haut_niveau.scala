@@ -1,6 +1,6 @@
-package III_Fonctions
+package e3_Fonctions
 
-import I_Syntaxe.HandsOnSuiteP1
+import e1_Syntaxe.HandsOnSuiteP1
 
 /**
 * les fonctions de plus haut niveau
