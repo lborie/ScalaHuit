@@ -7,6 +7,11 @@ trait HandsOnSuite extends FunSuite with ShouldMatchers {
   def __ : Any = {
     throw new Exception("à méditer")
   }
+
+  def ??? : Nothing = throw new Error("an implementation is missing")
+
+  type ??? = Nothing
+  type *** = Any
 }
 
 
