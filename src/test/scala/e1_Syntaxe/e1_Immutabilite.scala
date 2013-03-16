@@ -1,8 +1,8 @@
 package e1_Syntaxe
 
 /**
-*  Immutabilité ?
-*/ 
+ * Immutabilité ?
+ */
 class e1_Immutabilite extends HandsOnSuiteP1 {
 
   test("Les vars peuvent être réaffectées") {

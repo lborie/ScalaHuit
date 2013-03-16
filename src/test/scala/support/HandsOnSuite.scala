@@ -8,7 +8,7 @@ trait HandsOnSuite extends FunSuite with ShouldMatchers {
     throw new Exception("à méditer")
   }
 
-  def ??? : Nothing = throw new Error("an implementation is missing")
+  def ??? : Nothing = throw new Error("à méditer")
 
   type ??? = Nothing
   type *** = Any
@@ -19,4 +19,7 @@ trait HandsOnSuite extends FunSuite with ShouldMatchers {
 object HandsOnSuite {
   object partie1 extends Tag("support.partie1")
   object partie2 extends Tag("support.partie2")
+  object partie3 extends Tag("support.partie3")
+  object partie4 extends Tag("support.partie4")
+  object partie5 extends Tag("support.partie5")
 }

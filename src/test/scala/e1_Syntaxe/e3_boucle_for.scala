@@ -1,10 +1,9 @@
 package e1_Syntaxe
 
-import support.HandsOnSuite
 
 /**
-*  Les for
-*/
+ * Les for
+ */
 
 class e3_boucle_for extends HandsOnSuiteP1 {
 
@@ -21,8 +20,8 @@ class e3_boucle_for extends HandsOnSuiteP1 {
   }
 
   /**
-  * on peut rajouter des conditions à l'intérieur des boucles
-  */
+   * on peut rajouter des conditions à l'intérieur des boucles
+   */
   test("les boucles for peuvent contenir de la logique") {
     val quelqueNombres = Range(0, 10)
     var somme = 0
@@ -37,8 +36,8 @@ class e3_boucle_for extends HandsOnSuiteP1 {
   }
 
   /**
-  * Une boucle for peut renvoyer une liste, sur laquelle on peut appliquer des fonctions
-  */
+   * Une boucle for peut renvoyer une liste, sur laquelle on peut appliquer des fonctions
+   */
   test("Les boucles for peuvent produire une liste, peuvent être sommée facilement") {
     val quelqueNombres = Range(0, 10)
 
@@ -49,35 +48,35 @@ class e3_boucle_for extends HandsOnSuiteP1 {
       }
       yield i
 
-    uneListe.reduceLeft((i,j) => i + j) should be(__)
+    uneListe.reduceLeft((i, j) => i + j) should be(__)
   }
 
   /**
-  * Voici l'équivalent Java
+   * Voici l'équivalent Java
 
-  * class Tuple() {
-  * private final int x;
-  * private final int y; 
-  *
-  *   public void Tuple(int x, int y) {
-  *     this.x = x;
-  *     this.y = y;
-  *   }
-  *
-  * ... on met pas tout...
-  * 
-  * }
-  *
-  * List<Tuple> coordinates = new ArrayList<Tuple>();
-  *
-  * for (int x = 1; i < 5; x++) {
-  *   for (int y = 1; i < 3; y++) {
-  *      coordinates.add(new Tuple(x, y)); 
-  *   }
-  * }
-  * ... blablabla
-  *
-  */
+   * class Tuple() {
+   * private final int x;
+   * private final int y;
+   *
+   * public void Tuple(int x, int y) {
+   * this.x = x;
+   * this.y = y;
+   * }
+   *
+   * ... on met pas tout...
+   *
+   * }
+   *
+   * List<Tuple> coordinates = new ArrayList<Tuple>();
+   *
+   * for (int x = 1; i < 5; x++) {
+   * for (int y = 1; i < 3; y++) {
+   * coordinates.add(new Tuple(x, y));
+   * }
+   * }
+   * ... blablabla
+   *
+   */
   test("Les bouclent for peuvent être imbriquées") {
     val xValues = Range(1, 5)
     val yValues = Range(1, 3)

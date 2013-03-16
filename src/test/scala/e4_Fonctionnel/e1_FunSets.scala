@@ -1,6 +1,5 @@
 package e4_Fonctionnel
 
-import e1_Syntaxe.HandsOnSuiteP1
 
 /**
  * Cette série de fonctions à créer est là pour comprendre la panoplie "fonctionnelle" de Scala
@@ -89,20 +88,9 @@ object FunSets {
   }
 }
 
-class e1_FunSets extends HandsOnSuiteP1 {
+class e1_FunSets extends HandsOnSuiteP4 {
 
   import FunSets._
-
-  /**
-   * Link to the scaladoc - very clear and detailed tutorial of FunSuite
-   *
-   * http://doc.scalatest.org/1.8/index.html#org.scalatest.FunSuite
-   *
-   * Operators
-   *  - test
-   *  - ignore
-   *  - pending
-   */
 
   /**
    * Tests are written using the "test" operator and the "assert" method.
@@ -137,7 +125,7 @@ class e1_FunSets extends HandsOnSuiteP1 {
    * Instead of copy-pasting the code for creating the set into every test, we can
    * store it in the test class using a val:
    *
-   *   val s1 = singletonSet(1)
+   * val s1 = singletonSet(1)
    *
    * However, what happens if the method "singletonSet" has a bug and crashes? Then
    * the test methods are not even executed, because creating an instance of the

@@ -1,22 +1,21 @@
 package e2_Collections
 
-import e1_Syntaxe.HandsOnSuiteP1
 
 /**
-* On passe aux LISTES
-*/ 
+ * On passe aux LISTES
+ */
 
-class e1_listes extends HandsOnSuiteP1{
-
-
-  /**
-  *  ça peut servir : http://www.scala-lang.org/api/current/index.html#scala.collection.immutable.List
-  */
+class e1_listes extends HandsOnSuiteP2 {
 
 
   /**
-  * Nil est et restera la liste vide quelque soit le typage de la liste !
-  */
+   * ça peut servir : http://www.scala-lang.org/api/current/index.html#scala.collection.immutable.List
+   */
+
+
+  /**
+   * Nil est et restera la liste vide quelque soit le typage de la liste !
+   */
   test("Les listes Nil, quelque soit leur type sont identiques") {
     val a: List[String] = Nil
     val b: List[Int] = Nil
@@ -28,8 +27,8 @@ class e1_listes extends HandsOnSuiteP1{
   }
 
   /**
-  * Attention, on as vu cet exemple dans l'exo 2 sur les cases classes !
-  */
+   * Attention, on as vu cet exemple dans l'exo 2 sur les cases classes !
+   */
   test("Eq teste l'égalité d'objet") {
     val a = List(1, 2, 3)
     val b = List(1, 2, 3)
@@ -38,8 +37,8 @@ class e1_listes extends HandsOnSuiteP1{
   }
 
   /**
-  *  Quelques méthodes utiles à retenir
-  */
+   * Quelques méthodes utiles à retenir
+   */
   test("Les fonctions head et tail") {
     val a = List(1, 3, 5, 7, 9)
 
@@ -68,12 +67,12 @@ class e1_listes extends HandsOnSuiteP1{
     val c = List(1, 2, 5, 8, 9)
     val b = c.filterNot(v => v == 5)
     c should equal(List(1, 2, 5, 8, 9)) // les listes sont immutables par défaut !
-    b should equal(__) 
+    b should equal(__)
   }
 
   /**
-  * L'utilisation de "_" qui désigne tout ce qui n'a pas beson d'être nommé
-  */
+   * L'utilisation de "_" qui désigne tout ce qui n'a pas beson d'être nommé
+   */
   test("Les fonctions appliquées aux listes peuvent utiliser '_' ") {
     val a = List(1, 2, 3)
     a.map(_ * 2) should equal(__)

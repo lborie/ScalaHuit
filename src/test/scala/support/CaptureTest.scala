@@ -8,7 +8,7 @@ class CaptureBlockTest extends ReflexionTest with FunSuite {
 
   test("basic capture") {
 
-   val (astring, ares)= CaptureBlock.capture {
+    val (astring, ares) = CaptureBlock.capture {
       val a = 1
       a + 1
     }
@@ -18,7 +18,7 @@ class CaptureBlockTest extends ReflexionTest with FunSuite {
   }
 
   test("capture + eval") {
-    val (block,_ ) = CaptureBlock.capture {
+    val (block, _) = CaptureBlock.capture {
 
       val a = 1
       assert(a == 1)
@@ -26,7 +26,7 @@ class CaptureBlockTest extends ReflexionTest with FunSuite {
     }
 
     println(block)
-     assertCompile(block)
+    assertCompile(block)
 
   }
 

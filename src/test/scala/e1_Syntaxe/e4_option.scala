@@ -2,16 +2,16 @@ package e1_Syntaxe
 
 
 /**
-* Les options :
-*  - http://www.scala-lang.org/api/current/index.html#scala.Option
-*/
+ * Les options :
+ * - http://www.scala-lang.org/api/current/index.html#scala.Option
+ */
 
 class e4_option extends HandsOnSuiteP1 {
   /**
-  * Quelques tests rapides
-  */
+   * Quelques tests rapides
+   */
   test("None est égal à...None") {
-   None should be(__)
+    None should be(__)
   }
 
   test("None est identique à None") {

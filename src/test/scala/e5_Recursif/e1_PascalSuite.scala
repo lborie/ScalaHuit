@@ -1,25 +1,28 @@
 package e5_Recursif
 
-import e1_Syntaxe.HandsOnSuiteP1
 
 /**
-*The following pattern of numbers is called Pascal’s triangle.
-*
-*      1
-*     1 1
-*    1 2 1
-*   1 3 3 1
-*  1 4 6 4 1
-*  ...
-*
-* The numbers at the edge of the triangle are all 1, and each number inside the triangle is the sum of the two numbers above it.
-* Write a function that computes the elements of Pascal’s triangle by means of a recursive process.
-*
-* Do this exercise by implementing the pascal function in Main.scala, which takes a column c and a row r,
-* counting from 0 and returns the number at that spot in the triangle.
-* For example, pascal(0,2)=1, pascal(1,2)=2 and pascal(1,3)=3.
-*
-**/
+ * Le Pattern de nombres suivant est appelé Triangle de Pascal.
+ *
+ *       1
+ *      1 1
+ *     1 2 1
+ *    1 3 3 1
+ *   1 4 6 4 1
+ *   ...
+ *
+ * Il y a toujours un 1 au sommet de la pyramide, et chaque nombre dans la pyramide est la somme des deux nombres au dessus de lui.
+ * Ecrivez une fonction qui calcule les éléments du triangle de pascale, de façon récursive.
+ *
+ * Dans la fonction à implémenter (def pascal(c: Int, r: Int): Int = ???), c est la colonne, et r la ligne.
+ * On compte à partir de 0, du sommet
+ * On retourne la valeur du chiffre présent aux coordonnées données.
+ *
+ * Par exemple :
+ *    pascal(0,2)=1
+ *    pascal(1,2)=2
+ *    pascal(1,3)=3.
+ **/
 
 object Pascal {
   def main(args: Array[String]) {
@@ -37,18 +40,19 @@ object Pascal {
   def pascal(c: Int, r: Int): Int = ???
 }
 
-class e1_PascalSuite extends HandsOnSuiteP1 {
+class e1_PascalSuite extends HandsOnSuiteP5 {
+
   import Pascal.pascal
 
   test("col=0,row=2") {
-    pascal(0,2) should be(1)
+    pascal(0, 2) should be(1)
   }
 
   test("col=1,row=2") {
-    pascal(1,2) should be(2)
+    pascal(1, 2) should be(2)
   }
 
   test("col=1,row=3") {
-    pascal(1,3) should be(3)
+    pascal(1, 3) should be(3)
   }
 }

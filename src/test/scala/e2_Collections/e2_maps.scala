@@ -1,22 +1,21 @@
 package e2_Collections
 
-import e1_Syntaxe.HandsOnSuiteP1
 
 /**
-*  Puis aux MAP :http://www.scala-lang.org/api/current/index.html#scala.collection.concurrent.Map
-*/
+ * Puis aux MAP :http://www.scala-lang.org/api/current/index.html#scala.collection.concurrent.Map
+ */
 
-class e2_maps extends HandsOnSuiteP1 {
+class e2_maps extends HandsOnSuiteP2 {
 
   /**
-  * Création toute bête d'une map et première opérations
-  */
+   * Création toute bête d'une map et première opérations
+   */
   test("C'est facile de créer une map !") {
     val myMap = Map("PA" -> "Paris", "BE" -> "Besançon", "BL" -> "Belfort")
     myMap.size should be(__)
     //la tête
     myMap.head should be(__)
-   // il n'y a pas de notion d'ordre dans une map
+    // il n'y a pas de notion d'ordre dans une map
     val myMapBis = Map("BE" -> "Besançon", "BL" -> "Belfort", "PA" -> "Paris")
     myMap.equals(myMapBis) should be(__)
     // impact des 'doublons'
@@ -25,8 +24,8 @@ class e2_maps extends HandsOnSuiteP1 {
   }
 
   /**
-  * L'addition de maps se fait assez naturellement et facilement avec +
-  */
+   * L'addition de maps se fait assez naturellement et facilement avec +
+   */
   test("Addition de map") {
     val myMap = Map("PA" -> "Paris", "BE" -> "Besançon", "NA" -> "Nantes")
     // ajout d'un élément
@@ -36,8 +35,8 @@ class e2_maps extends HandsOnSuiteP1 {
   }
 
   /**
-  * Les types de clé
-  */
+   * Les types de clé
+   */
   test("On peut mixer les types de clé") {
     val myMap = Map("Ann Arbor" -> "MI", 49931 -> "MI")
     myMap("Ann Arbor") should be(__)
@@ -45,8 +44,8 @@ class e2_maps extends HandsOnSuiteP1 {
   }
 
   /**
-  * Quelques opérations sur les maps
-  */
+   * Quelques opérations sur les maps
+   */
   test("On peut accéder/supprimer les élément d'une map") {
     val myMap = Map("PA" -> "Paris", "BE" -> "Besançon", "NA" -> "Nantes", "BL" -> "Belfort")
 

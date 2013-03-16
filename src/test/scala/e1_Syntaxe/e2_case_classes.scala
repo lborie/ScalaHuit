@@ -1,14 +1,13 @@
 package e1_Syntaxe
 
-import support.HandsOnSuite
 
 /**
-*  Quelques exos sur les cases classes
-*/ 
-class e2_case_classes extends HandsOnSuiteP1{
+ * Quelques exos sur les cases classes
+ */
+class e2_case_classes extends HandsOnSuiteP1 {
   /**
-  * La création d'une instance d'une case class
-  */
+   * La création d'une instance d'une case class
+   */
   test("C'est facile de créer une case classe !!") {
     case class MonChien(nom: String, race: String)
 
@@ -23,13 +22,13 @@ class e2_case_classes extends HandsOnSuiteP1{
   }
 
   /**
-  * Les égalités
-  */
+   * Les égalités
+   */
   test("Les Case classes ont une méthode equals qui 'marche'") {
     case class Personne(prénom: String, nom: String)
 
     val p1 = new Personne("Arsène", "Lupin")
-    val p2 = new Personne("James" , "Bond")
+    val p2 = new Personne("James", "Bond")
     val p3 = new Personne("Arsène", "Lupin")
 
     // en fait, == en Scala est un appel à .equals de Java
@@ -44,8 +43,8 @@ class e2_case_classes extends HandsOnSuiteP1{
   }
 
   /**
-  * La méthode hashcode
-  */
+   * La méthode hashcode
+   */
   test("Les case classes ont une méthode hascode qui marche (de base)") {
     case class Personne(prénom: String, nom: String)
 
@@ -58,8 +57,8 @@ class e2_case_classes extends HandsOnSuiteP1{
   }
 
   /**
-  * La méthode toString
-  */
+   * La méthode toString
+   */
   test("Les cases classes définissent de base la méthode to String") {
     case class MonChien(nom: String, race: String)
     val d1 = MonChien("Scooby", "Doberman")
@@ -68,8 +67,8 @@ class e2_case_classes extends HandsOnSuiteP1{
   }
 
   /**
-  * Les accesseurs
-  */
+   * Les accesseurs
+   */
   test("Les cases classes définissent automatiquement les accesseurs") {
     case class MonChien(nom: String, race: String)
 
@@ -99,10 +98,10 @@ class e2_case_classes extends HandsOnSuiteP1{
     d2.race should be(__) // les autres propriétés sont copiées de l'original
   }
 
-  
+
   /**
-  * les cases classes peuvent avoir des paramètres nommés et des paramètres par défaut
-  */
+   * les cases classes peuvent avoir des paramètres nommés et des paramètres par défaut
+   */
   test("les cases classes ont des paramètres par défaut et des paramètres nommés") {
     case class Personne(prénom: String, nom: String, age: Int = 0, tel: String = "")
 
