@@ -17,7 +17,7 @@ class e2_classes extends HandsOnSuiteP1 {
    */
   test("Le paramètre val définit un getter") {
     val aClass = new ClassWithValParameter("name goes here")
-    aClass.name should be(__)
+    aClass.name should be("name goes here")
   }
 
   class ClassWithVarParameter(var description: String) {

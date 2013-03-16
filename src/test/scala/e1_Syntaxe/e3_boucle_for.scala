@@ -16,7 +16,7 @@ class e3_boucle_for extends HandsOnSuiteP1 {
       somme += i
     }
 
-    somme should equal(__)
+    somme should equal(45)
   }
 
   /**
@@ -32,7 +32,7 @@ class e3_boucle_for extends HandsOnSuiteP1 {
       }
     }
 
-    somme should equal(__)
+    somme should equal(20)
   }
 
   /**
@@ -48,7 +48,7 @@ class e3_boucle_for extends HandsOnSuiteP1 {
       }
       yield i
 
-    uneListe.reduceLeft((i, j) => i + j) should be(__)
+    uneListe.reduceLeft((i, j) => i + j) should be(20)
   }
 
   /**
@@ -85,6 +85,6 @@ class e3_boucle_for extends HandsOnSuiteP1 {
       y <- yValues
     }
     yield (x, y)
-    coordinates(4) should be(__)
+    coordinates(4) should be((3,1))
   }
 }

@@ -16,9 +16,9 @@ class e5_case_classes extends HandsOnSuiteP1 {
     val d3 = new MonChien("Scooby", "Doberman") // Cela marche aussi avec new !
     val d4 = MonChien.apply("Rex", "Custom") // utilisation de la méthode apply
 
-    (d1 == d3) should be(__)
-    (d1 == d2) should be(__)
-    (d2 == d3) should be(__)
+    (d1 == d3) should be(true)
+    (d1 == d2) should be(false)
+    (d2 == d3) should be(false)
   }
 
   /**
@@ -32,14 +32,14 @@ class e5_case_classes extends HandsOnSuiteP1 {
     val p3 = new Personne("Arsène", "Lupin")
 
     // en fait, == en Scala est un appel à .equals de Java
-    (p1 == p2) should be(__)
-    (p1 == p3) should be(__)
+    (p1 == p2) should be(false)
+    (p1 == p3) should be(true)
 
 
     // eq en Scala correspond à l'égalité par référence
     // c'est à dire le '==' de Java
-    (p1 eq p2) should be(__)
-    (p1 eq p3) should be(__)
+    (p1 eq p2) should be(false)
+    (p1 eq p3) should be(false)
   }
 
   /**
@@ -52,8 +52,8 @@ class e5_case_classes extends HandsOnSuiteP1 {
     val p2 = new Personne("Super", "Man")
     val p3 = new Personne("Iron", "Man")
 
-    (p1.hashCode == p2.hashCode) should be(__)
-    (p1.hashCode == p3.hashCode) should be(__)
+    (p1.hashCode == p2.hashCode) should be(false)
+    (p1.hashCode == p3.hashCode) should be(true)
   }
 
   /**
@@ -73,8 +73,8 @@ class e5_case_classes extends HandsOnSuiteP1 {
     case class MonChien(nom: String, race: String)
 
     val d1 = MonChien("Scooby", "Doberman")
-    d1.nom should be(__)
-    d1.race should be(__)
+    d1.nom should be("Scooby")
+    d1.race should be("Doberman")
 
     // Qu'est ce qui se passe lorsque l'on fait ça :
     //d1.nom = "Scooby Doo"
@@ -91,11 +91,11 @@ class e5_case_classes extends HandsOnSuiteP1 {
 
     val d2 = d1.copy(nom = "Scooby Doo") // copie de la classe, mais avec le nom qui change
 
-    d1.nom should be(__) // original est intact (immutabilité)
-    d1.race should be(__)
+    d1.nom should be("Scooby") // original est intact (immutabilité)
+    d1.race should be("Doberman")
 
-    d2.nom should be(__)
-    d2.race should be(__) // les autres propriétés sont copiées de l'original
+    d2.nom should be("Scooby Doo")
+    d2.race should be("Doberman") // les autres propriétés sont copiées de l'original
   }
 
 
@@ -119,18 +119,18 @@ class e5_case_classes extends HandsOnSuiteP1 {
     p1.prénom should be("Sherlock")
     p1.nom should be("Holmes")
     p1.age should be(23)
-    p1.tel should be(__)
+    p1.tel should be("06-XX-XX-XX-XX")
 
     p2.prénom should be("Doctor")
-    p2.nom should be(__)
+    p2.nom should be("Watson")
     p2.age should be(0)
-    p2.tel should be(__)
+    p2.tel should be("")
 
-    p3.prénom should be(__)
+    p3.prénom should be("Moriarty")
     p3.nom should be("Professor")
     p3.age should be(0)
-    p3.tel should be(__)
+    p3.tel should be("01-XX-XX-XX-XX")
 
-    (p3 == p4) should be(__)
+    (p3 == p4) should be(false)
   }
 }
