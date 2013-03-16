@@ -17,7 +17,12 @@ package e5_Recursif
  * Et pour une somme >0 EUR, si vous n'avez pas de pièce ?
  **/
 object CountChange {
-  def countChange(money: Int, coins: List[Int]): Int = ???
+  def countChange(money: Int, coins: List[Int]): Int = {
+    if (money <= 0) 0
+    else if (coins.isEmpty) 0
+    else if (coins.head == money) 1 + countChange(money, coins.tail)
+    else countChange(money - coins.head, coins) + countChange(money, coins.tail)
+  }
 }
 
 class e2_CountingChange extends HandsOnSuiteP5 {

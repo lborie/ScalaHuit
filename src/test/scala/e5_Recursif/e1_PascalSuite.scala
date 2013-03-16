@@ -37,7 +37,10 @@ object Pascal {
   /**
    * Ecrire la fonction pascale, qui retourne la bonne valeur en fonction de ses coordonnées
    */
-  def pascal(c: Int, r: Int): Int = ???
+  def pascal(c: Int, r: Int): Int = {
+    if (c == 0 || c == r) 1
+    else pascal(c, r - 1) + pascal(c - 1, r - 1)
+  }
 }
 
 class e1_PascalSuite extends HandsOnSuiteP5 {
