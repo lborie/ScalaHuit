@@ -18,7 +18,7 @@ class e0_fonctions_de_plus_haut_niveau extends HandsOnSuiteP3 {
   test("Une fonction anonyme comme variable") {
     val lambda = (x: Int) => x + 1
     def result = List(1, 2, 3) map lambda
-    result should be(__)
+    result should be(List(2, 3, 4))
   }
 
   /**
@@ -29,7 +29,7 @@ class e0_fonctions_de_plus_haut_niveau extends HandsOnSuiteP3 {
       def apply(v1: Int) = v1 + 1
     }
     def result = List(1, 2, 3) map lambda
-    result should be(__)
+    result should be(List(2, 3, 4))
   }
 
   /**
@@ -41,7 +41,7 @@ class e0_fonctions_de_plus_haut_niveau extends HandsOnSuiteP3 {
     }
 
     def result = List(1, 2, 3) map lambda
-    result should be(__)
+    result should be(List(2, 3, 4))
   }
 
 
@@ -55,13 +55,13 @@ class e0_fonctions_de_plus_haut_niveau extends HandsOnSuiteP3 {
       }
     }
 
-    addWithoutSyntaxSugar(1)(2) should be(__)
+    addWithoutSyntaxSugar(1)(2) should be(3)
 
     def add(x: Int) = (y: Int) => x + y
-    add(2)(3) should be(__)
+    add(2)(3) should be(5)
 
     def fiveAdder = add(5)
-    fiveAdder(5) should be(__)
+    fiveAdder(5) should be(10)
   }
 
   /**
@@ -78,11 +78,11 @@ class e0_fonctions_de_plus_haut_niveau extends HandsOnSuiteP3 {
 
     makeWhatEverYouLike(List("ABC", "XYZ", "123"), {
       x => x.toLowerCase
-    }) should be(__)
+    }) should be(List("abc", "xyz", "123"))
     //using it inline
     List("Scala", "Erlang", "Clojure") map {
       _.length
-    } should be(__)
+    } should be(List(5, 6, 7))
   }
 
   /**
@@ -91,8 +91,8 @@ class e0_fonctions_de_plus_haut_niveau extends HandsOnSuiteP3 {
   test("La currification est une technique qui permet de transformer une fonction avec des paramètres multiples en une fonction à un seul paramètre") {
     def multiply(x: Int, y: Int) = x * y
     val multiplyCurried = (multiply _).curried
-    multiply(4, 5) should be(__)
-    multiplyCurried(3)(2) should be(__)
+    multiply(4, 5) should be(20)
+    multiplyCurried(3)(2) should be(6)
   }
 
 
