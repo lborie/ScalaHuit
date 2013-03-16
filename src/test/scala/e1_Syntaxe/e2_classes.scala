@@ -5,7 +5,7 @@ package e1_Syntaxe
  * Passe très rapide sur les classes en Scala
  */
 
-class e5_classes extends HandsOnSuiteP1 {
+class e2_classes extends HandsOnSuiteP1 {
 
   // on peut définir des classes avec des paramètres val et var
   class ClassWithValParameter(val name: String) {

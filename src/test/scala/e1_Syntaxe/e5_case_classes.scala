@@ -4,7 +4,7 @@ package e1_Syntaxe
 /**
  * Quelques exos sur les cases classes
  */
-class e2_case_classes extends HandsOnSuiteP1 {
+class e5_case_classes extends HandsOnSuiteP1 {
   /**
    * La création d'une instance d'une case class
    */
