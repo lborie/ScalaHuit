@@ -22,4 +22,5 @@ object HandsOnSuite {
   object partie3 extends Tag("support.partie3")
   object partie4 extends Tag("support.partie4")
   object partie5 extends Tag("support.partie5")
+  object partie6 extends Tag("support.partie6")
 }
