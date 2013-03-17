@@ -8,7 +8,15 @@ object e2_Calculatrice {
 
   case class Operation(left: Double, right: Double, operande: String)
 
-  def calculate(operation: Operation): Double = ???
+  def calculate(operation: Operation): Double = {
+    operation match {
+      case Operation(left, right, "+") => left + right
+      case Operation(left, right, "-") => left - right
+      case Operation(left, right, "*") => left * right
+      case Operation(left, right, "/") => left / right
+      case _ => throw new UnsupportedOperationException("Unsupported Operation " + operation.operande)
+    }
+  }
 }
 
 class e2_Calculatrice extends HandsOnSuiteP6 {

@@ -7,8 +7,8 @@ package e6_PatternMatching
 object e1_Collections {
   def taille(list: List[Any]) : Int = {
     list match {
-      case Nil => ???
-      case head :: tail => ???
+      case Nil => 0
+      case head :: tail => 1 + taille(tail)
     }
   }
 }
