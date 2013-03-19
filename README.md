@@ -23,6 +23,7 @@ Solutions
 ---------
 Si vous êtes bloqués, il est possible de consulter les solutions au fur et à mesure de l'avancée dans le projet.
 Pour cela
+
     git checkout -f e1_solution
     git checkout -f e2_solution
     ...
